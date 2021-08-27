@@ -1,0 +1,136 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #fff;
+  background-color: #111111;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 50px;
+  margin: 0 auto;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0 50px;
+}
+
+.header__logo {
+  padding-top: 10px;
+}
+
+.header__menu-list {
+  display: flex;
+}
+
+.header__menu-item {
+  margin-right: 40px;
+}
+.header__menu-item:last-child {
+  margin-right: 0;
+}
+
+.header__menu-link {
+  color: #fff;
+  font-size: 21px;
+  line-height: 31px;
+  transition: all 0.5s;
+  border-bottom: 1px solid transparent;
+}
+
+.header__menu-link:hover {
+  color: #00c2ff;
+  border-bottom: 1px solid #00c2ff;
+}
+
+.header__social-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding-top: 10px;
+}
+
+.header__social-item {
+  padding-right: 29px;
+}
+
+.header__social-item:last-child {
+  padding-right: 0;
+}
+
+.top {
+  position: relative;
+  height: 650px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+}
+
+.top::before {
+  content: '';
+  background-image: url(/images/fractal.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  top: -105px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.top__inner {
+  padding-top: 160px;
+}
+
+.top__subtitle {
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 45px;
+}
+
+.top__title {
+  font-size: 70px;
+  line-height: 105px;
+  font-weight: 700;
+  max-width: 890px;
+}
+
+.top__title span {
+  color: #00c2ff;
+}
+
+.top__btn {
+  margin-top: 10px;
+  border: 2px solid #00c2ff;
+  width: 206px;
+  height: 65px;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 42px;
+  color: #fff;
+  background: none;
+  transition: all 0.5s;
+}
+
+.top__btn:hover {
+  background: #00c2ff;
+}

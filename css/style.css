@@ -1,3 +1,13 @@
+/* Vars */
+
+:root {
+  --white: #fff;
+  --main-black: #111;
+  --aqua: #00c2ff;
+}
+
+/* Common styles */
+
 *,
 *::after,
 *::before {
@@ -5,12 +15,8 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  font-size: 20px;
-  line-height: 30px;
-  font-weight: 400;
-  color: #fff;
-  background-color: #111111;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--main-black);
 }
 
 a {
@@ -20,10 +26,25 @@ a {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1540px;
   padding: 0 50px;
   margin: 0 auto;
 }
+
+.btn {
+  width: 206px;
+  height: 65px;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 42px;
+  background: none;
+  border: 2px solid var(--aqua);
+  color: var(--white);
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+
+/* Header */
 
 .header__inner {
   display: flex;
@@ -32,50 +53,40 @@ a {
   padding: 50px 0 50px;
 }
 
-.header__logo {
-  padding-top: 10px;
-}
-
-.header__menu-list {
+.nav__list {
   display: flex;
 }
 
-.header__menu-item {
+.nav__item:not(:last-child) {
   margin-right: 40px;
 }
-.header__menu-item:last-child {
-  margin-right: 0;
-}
 
-.header__menu-link {
-  color: #fff;
+.nav__link {
+  color: var(--white);
   font-size: 21px;
   line-height: 31px;
   transition: all 0.5s;
   border-bottom: 1px solid transparent;
 }
 
-.header__menu-link:hover {
-  color: #00c2ff;
-  border-bottom: 1px solid #00c2ff;
+.nav__link:hover {
+  color: var(--aqua);
+  border-bottom: 1px solid var(--aqua);
 }
 
-.header__social-list {
+.header__social {
   display: flex;
   align-items: center;
   list-style: none;
-  padding-top: 10px;
 }
 
-.header__social-item {
-  padding-right: 29px;
+.social__item:not(:last-child) {
+  margin-right: 25px;
 }
 
-.header__social-item:last-child {
-  padding-right: 0;
-}
+/* Hero */
 
-.top {
+.hero {
   position: relative;
   height: 650px;
   width: 100%;
@@ -84,53 +95,46 @@ a {
   object-fit: cover;
 }
 
-.top::before {
-  content: '';
-  background-image: url(/images/fractal.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+.hero::before {
+  position: absolute;
   top: -105px;
   left: 0;
   bottom: 0;
   right: 0;
-  position: absolute;
+  content: "";
+  background-image: url("../img/fractal.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   z-index: -1;
 }
 
-.top__inner {
-  padding-top: 160px;
+.hero__inner {
+  padding-top: 190px;
 }
 
-.top__subtitle {
-  font-weight: 300;
+.hero__subtitle {
   font-size: 30px;
+  font-weight: 300;
   line-height: 45px;
+  color: var(--white);
 }
 
-.top__title {
+.hero__title {
+  max-width: 890px;
   font-size: 70px;
   line-height: 105px;
   font-weight: 700;
-  max-width: 890px;
+  color: var(--white);
 }
 
-.top__title span {
-  color: #00c2ff;
+.hero__span {
+  color: var(--aqua);
 }
 
-.top__btn {
+.hero__btn {
   margin-top: 10px;
-  border: 2px solid #00c2ff;
-  width: 206px;
-  height: 65px;
-  font-weight: 500;
-  font-size: 28px;
-  line-height: 42px;
-  color: #fff;
-  background: none;
-  transition: all 0.5s;
 }
 
-.top__btn:hover {
-  background: #00c2ff;
+.hero__btn:hover {
+  background: var(--aqua);
 }
